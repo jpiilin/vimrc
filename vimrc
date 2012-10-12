@@ -1,3 +1,4 @@
+" Author Lin Dong @ Gatech
  set nocompatible               " be iMproved
  filetype off                   " required!
  set number          " show line numbers
