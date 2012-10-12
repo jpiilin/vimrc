@@ -8,6 +8,14 @@
  highlight OverLength ctermbg=red ctermfg=white guibg=#592929
  match OverLength /\%81v.\+/
  
+ " Replace tabs with spaces
+ set expandtab
+ set tabstop=4
+ set shiftwidth=4
+ map <F2> :retab <CR> :wq! <CR>
+
+
+ " Vundle stuff
  set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
  " let Vundle manage Vundle
