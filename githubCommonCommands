@@ -1,3 +1,8 @@
+Start off
+  git clone [link to repo here]
+
+
+commiting steps
 1)
     git add .
  or git rm --cached filename
@@ -6,6 +11,15 @@
 3)
     git push
 
+Branching Steps
+git branch newBranchName
+git checkout branchName
+
+git branch -d experiment // delete experiment, after it already been merged
+git branch -D experiment // force delete experiment, without merging it
+
 references: http://www.linuxidc.com/Linux/2012-06/62168p2.htm
             http://hi.baidu.com/aideyoulin/item/5400c516ea5e9709b98a1ade
+            http://learn.github.com/p/branching.html
+
 
