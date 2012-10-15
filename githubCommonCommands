@@ -1,0 +1,11 @@
+1)
+    git add .
+ or git rm --cached filename
+2)
+    git commit -m "comments"
+3)
+    git push
+
+references: http://www.linuxidc.com/Linux/2012-06/62168p2.htm
+            http://hi.baidu.com/aideyoulin/item/5400c516ea5e9709b98a1ade
+
