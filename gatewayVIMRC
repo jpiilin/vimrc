@@ -1,0 +1,20 @@
+ set nocompatible " be iMproved
+ filetype off " required!
+ set number " show line numbers
+ set mouse=a " active mouse drag when using vsplit
+ set splitright " split the window on the right side
+ syntax on
+"Highlight after 80
+ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+ match OverLength /\%81v.\+/
+" replace tab with spaces
+ set expandtab
+ set tabstop=4
+ set shiftwidth=4
+ map <F2> :retab <CR> :wq! <CR>
+ 
+ " To look up the history of commands just type q:
+ " More reference:
+ " http://vim.wikia.com/wiki/Using_command-line_history
+ " http://vim.wikia.com/wiki/Moving_lines_up_or_down
+ "
