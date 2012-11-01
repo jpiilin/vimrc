@@ -12,7 +12,33 @@
  set tabstop=4
  set shiftwidth=4
  map <F2> :retab <CR> :wq! <CR>
- 
+
+ "code folding
+ " ============
+
+ set foldenable
+
+ " Fold column width
+ " TODO: set to local c/c++ files
+ set foldcolumn=4
+
+ " Make folding syntax sensitive
+ set foldmethod=syntax
+
+ " Folds with a higher level will be automatically closed.
+ set foldlevel=4
+
+ " Don't open folds when I search into them, or I undo something
+ set foldopen-=search,undo
+
+" Highlight fold column foreground and background colors
+""highlight Folded guibg=grey guifg=blue ctermbg=black ctermfg=blue
+""highlight FoldColumn guibg=grey10 guifg=white ctermbg=DarkBlue ctermfg=white
+
+ highlight Folded term=standout ctermbg=Grey ctermfg=black guibg=Grey38 guifg=DarkBlue
+ highlight FoldColumn term=standout ctermbg=Grey ctermfg=white guibg=Grey10 guifg=white
+
+
  " To look up the history of commands just type q:
  " More reference:
  " http://vim.wikia.com/wiki/Using_command-line_history
