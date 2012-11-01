@@ -17,7 +17,6 @@
  " ============
 
  set foldenable
-
  " Fold column width
  " TODO: set to local c/c++ files
  set foldcolumn=4
@@ -32,18 +31,19 @@
  set foldopen-=search,undo
 
 " Highlight fold column foreground and background colors
-""highlight Folded guibg=grey guifg=blue ctermbg=black ctermfg=blue
-""highlight FoldColumn guibg=grey10 guifg=white ctermbg=DarkBlue ctermfg=white
+"highlight Folded guibg=grey guifg=blue ctermbg=black ctermfg=blue
+"highlight FoldColumn guibg=grey10 guifg=white ctermbg=DarkBlue ctermfg=white
 
  highlight Folded term=standout ctermbg=Grey ctermfg=black guibg=Grey38 guifg=DarkBlue
- highlight FoldColumn term=standout ctermbg=Grey ctermfg=white guibg=Grey10 guifg=white
+ "highlight FoldColumn term=standout ctermbg=Grey ctermfg=white guibg=Grey10 guifg=white
+ highlight FoldColumn term=standout ctermbg=black ctermfg=white guibg=Grey10 guifg=white
 
 
 "folding settings
-set foldmethod=indent   "fold based on indent
-set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
-set foldlevel=1         "this is just what i use
+ set foldmethod=indent   "fold based on indent
+ set foldnestmax=10      "deepest fold is 10 levels
+"set nofoldenable        "dont fold by default
+ set foldlevel=1         "this is just what i use
 
  " Then you can toggle folding with za. You can fold everything with zM
  " and unfold everything with zR. zm and zr can be used to get
