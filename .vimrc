@@ -427,6 +427,11 @@ let g:Tex_UseMakefile = 0
 ""highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 ""match OverLength /\%81v.\+/
 
+"" Replace Tabs with Spaces by Hitting F3
+ set expandtab
+ set tabstop=4
+ set shiftwidth=4
+ map <F3> :retab <CR> :wq! <CR>
 
 
 "" For Vbundles 
