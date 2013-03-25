@@ -10,16 +10,35 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# for examples list files
 alias ll='ls -l'
-# for examples
+
 # for apache
 alias startxampp='sudo /opt/lampp/lampp start'
 alias stopxampp='sudo /opt/lampp/lampp stop'
-alias lixian='python /home/ldong/Downloads/lixian/lixian.py'
 alias startwww='sudo /etc/init.d/apache2 start'
 alias stopwww='sudo /etc/init.d/apache2 stop'
 alias restartwww='sudo /etc/init.d/apache2 restart'
-# 
+
+# for MATLAB
+alias matlab='zsh /opt/matlab2009b/bin/matlab &'
+
+# Logisim
+alias logisim='java -jar ~/logisim-generic-2.7.1.jar &'
+
+# Pycharm
+#alias pycharm='bash /home/ldong/pycharm-2.7.1/bin/pycharm.sh'
+
+# QQlixian
+alias lixian='python /home/ldong/Downloads/lixian/lixian.py'
+
+# GAMS alias
+alias gams='/usr/gams/gams24.0_linux_x64_64_sfx/gams'
+alias gamslib='/usr/gams/gams24.0_linux_x64_64_sfx/gamslib'
+
+
+# change display color
 alias on='sudo setpci -s 00:02.0 F4.B=AF'
 alias displayx='sudo setpci -s 00:02.0 F4.B=AF'
 alias displayy='sudo setpci -s 00:02.0 F4.B=AA'
