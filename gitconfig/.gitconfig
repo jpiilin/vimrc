@@ -1,0 +1,13 @@
+[user]
+	email = jpiilin@gmail.com
+	name = Lin Dong
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = /usr/bin/diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+[mergetool]
+	keepBackup = false
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = /usr/bin/diffmerge $LOCAL $REMOTE
