@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=IntelliJ IDEA
+Comment=Free Java, Groovy, Scala and Android applications development
+Exec=/opt/idea-IU-123.169/bin/idea.sh
+Path=/opt/idea-IU-123.169/bin
+Terminal=false
+Icon[en_US]=/opt/idea-IU-123.169/intellijidea.png
+Type=Application
+Categories=Development;IDE

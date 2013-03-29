@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=/home/ldong/topcoder/tc.jpg
+Name[en_US]=Topcoder Arena
+Exec=javaws -Xnosplash "/home/ldong/topcoder/topcoder.jnlp"
+Comment[en_US]=Lunch Topcoder Arena
+Name=Topcoder Arena
+Comment=Lunch Topcoder Arena
+Icon=gnome-panel-launcher
