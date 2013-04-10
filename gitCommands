@@ -1,0 +1,89 @@
+git bisect
+
+// git toolkit
+gitk
+
+
+//Commands that create a branch and set up the upstream on git:
+git branch --set-upstream <localBranch> origin/<branch>
+git checkout -b my-branch origin/whatever
+git push -u origin my-branch:my-branch
+
+// update from master when somebody pushed 
+git pull origin master
+git rebase master
+
+// push current branch to mybranch which is located in
+git push origin mybranch
+
+git push origin mybranch:mybranch
+Or: git push origin mybranch:refs/heads/mybranch
+
+delete the remote mybranch, you do:
+git push origin :mybranch
+
+// If you want to push your master branch into a newbranch
+// on the remote repository called origin then you can run:
+git push origin master:newbranch
+
+Although what you are trying is perfectly legal in git.. from a general best practice standpoint(when you have many parallel lines of development) I'd suggest to create a local tracking branch and push it your remote..
+git branch --track local_branch remote_branch
+
+http://stackoverflow.com/questions/2073841/how-can-i-discard-remote-changes-and-mark-a-file-as-resolved
+
+git checkout has the --ours option to check out the version of the file that you had locally (as opposed to --theirs, which is the version that you pulled in). You can pass . to git checkout to tell it to check out everything in the tree. Then you need to mark the conflicts as resolved, which you can do with git add, and commit your work once done:
+
+git checkout --ours . # checkout our local version of all files
+git add -u            # mark all conflicted files as merged
+git commit            # commit the merge
+
+git branch -avv
+shows you all branches as well as the name of the upstream branch.
+
+http://stackoverflow.com/questions/520650/how-do-you-make-an-existing-git-branch-track-a-remote-branch
+
+//set up tacker and upstream
+git branch -f --track linTest origin/linTest
+I believe that in as early as Git 1.5.x you could make a local branch $BRANCH track a remote branch origin/$BRANCH, like this.
+
+Given that $BRANCH and origin/$BRANCH exist, and you've not currently checked out $BRANCH (switch away if you have), do:
+
+git branch -f --track $BRANCH origin/$BRANCH
+This recreates $BRANCH as a tracking branch. The -f forces the creation despite $BRANCH existing already. --track is optional if the usual defaults are in place (that is, the git-config parameter branch.autosetupmerge is true).
+
+Note, if origin/$BRANCH doesn't exist yet, you can create it by pushing your local $BRANCH into the remote repository with:
+
+git push origin $BRANCH
+Followed by the previous command to promote the local branch into a tracking branch.
+
+Actually for the accepted answer to work:
+$ git remote add upstream git://...../proj.git
+$ git fetch upstream
+$ git branch -f --track qa upstream/qa
+# OR:
+$ git branch --set-upstream qa upstream/qa
+
+git checkout --theirs foo/bar.java
+git add foo/bar.java
+Then you can git rebase --continue after you've resolved all conflicts.
+
+
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gca='git commit -a'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias gp='git pull'
+alias push='git push'
+alias gr='git rebase '
+alias gm='git merge '
+
+
+Pro Git中文版：http://progit.org/book/zh/ 
+Git Merge的一个很好的例子讲解：http://blog.microsuncn.com/?p=2000 
+Git rebase的一个例子讲解：http://blog.microsuncn.com/?p=1989 
+关于Git rebase和merge的比较的另一个例子：http://gitguru.com/2009/02/03/rebase-v-merge-in-git/
